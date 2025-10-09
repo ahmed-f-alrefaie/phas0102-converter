@@ -3,6 +3,6 @@
     "version": "0.0.0",
     "scripts": {
         "dev": "uv run python run.py",
-        "generate:requirements": "uv pip freeze > requirements.txt"
+        "generate:requirements": "uv pip compile pyproject.toml -o requirements.txt"
     }
 }
