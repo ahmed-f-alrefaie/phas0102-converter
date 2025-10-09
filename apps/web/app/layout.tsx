@@ -4,7 +4,6 @@ import { Inter as FontSans } from "next/font/google";
 import { DashboardLayout } from "@/components/layouts/dashboard";
 import { cn } from "@/lib/utils";
 import { ThemeProvider } from "@/components/theme/theme-provider";
-import { OpenAPI } from "@/lib/api/client";
 import { TailwindIndicator } from "@/components/tailwind-indicator";
 
 export const fontSans = FontSans({
@@ -12,15 +11,10 @@ export const fontSans = FontSans({
   variable: "--font-sans",
 });
 
-if (process.env.NODE_ENV === "production") {
-  OpenAPI.BASE = "https://next-fast-turbo.vercel.app";
-}
-
-console.log("Using OpenAPI.base", OpenAPI.BASE);
 
 export const metadata: Metadata = {
-  title: "Next-Fast-Turbo",
-  description: "A Next.js, FastAPI and Turbo project scaffol",
+  title: "PHAS0102-Converter",
+  description: "Converter from ipynb to PDF for PHAS0102",
   icons: {
     icon: ["/favicon.png"],
   },
@@ -40,8 +34,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <DashboardLayout>{children}</DashboardLayout>
-          <TailwindIndicator />
+          {children}
         </ThemeProvider>
       </body>
     </html>
