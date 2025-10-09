@@ -10,7 +10,7 @@
     "start": "next start",
     "lint": "eslint . --max-warnings 0",
     "ui:add": "pnpm dlx shadcn-ui@latest add",
-    "generate-client": "openapi-ts --input https://next-fast-turbo-api.vercel.app/openapi.json --output ./lib/api/client",
+    "generate-client": "openapi-ts --input https://phas0102-converter-api.vercel.app/openapi.json --output ./lib/api/client",
     "generate-client:dev": "openapi-ts --input http://localhost:8000/openapi.json --output ./lib/api/client"
   },
   "dependencies": {

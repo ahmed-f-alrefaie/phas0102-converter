@@ -18,7 +18,7 @@ async function handleResponse(response: Response) {
 
 export default function Page() {
   const [currentMode, setCurrentMode] = React.useState<'colablink' | 'uploadfile'>('colablink');
-  const [errorMessage, setErrorMessage] = React.useState('Hello');
+  const [errorMessage, setErrorMessage] = React.useState('');
   const [file, setFile] = React.useState<File | null>(null);
   const [isLoading, setIsLoading] = React.useState(false);
   const fileInputRef = React.useRef<HTMLInputElement>(null);
@@ -165,6 +165,9 @@ export default function Page() {
                 placeholder='https://colab.research.google.com/drive/...'
                 className='w-full'
               />
+              <div className="text-sm text-muted-foreground">
+               Click Share - General access - Change to "Anyone with the link" - Copy Link
+              </div>
             </div>
           </TabsContent>
 
