@@ -1,0 +1,3 @@
+from api.main import get_application
+
+app = get_application()

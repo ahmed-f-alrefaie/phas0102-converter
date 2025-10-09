@@ -3,7 +3,7 @@ name = "api"
 version = "0.1.0"
 description = ""
 authors = [{ name = "cording12", email = "joncording12@gmail.com" }]
-requires-python = ">=3.10,<4"
+requires-python = ">=3.12,<4"
 packages = [{ include = "src" }]
 dependencies = [
     "fastapi>=0.118.2",
