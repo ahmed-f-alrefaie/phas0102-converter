@@ -20,7 +20,7 @@ class Settings(BaseSettings):
     PROJECT_DESCRIPTION: str = "A simple FastAPI app"
     model_config = SettingsConfigDict(env_file=".env")
     API_VERSION: str = "/api/v1"
-    ROOT: str = ROOT_PATH
+    ROOT: str = "https://phas0102-converter-api.vercel.app"
     secret_code: str
 
 

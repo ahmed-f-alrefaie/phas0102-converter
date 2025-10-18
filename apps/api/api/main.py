@@ -30,7 +30,6 @@ def get_application():
         title=settings.PROJECT_NAME,
         description=settings.PROJECT_DESCRIPTION,
         generate_unique_id_function=custom_generate_unique_id,
-        root_path=settings.ROOT,
         root_path_in_servers=True
     )
 
