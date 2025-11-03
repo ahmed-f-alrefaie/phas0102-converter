@@ -1,5 +1,5 @@
 
-import { jupyterUploadFile, jupyterDownloadColabNotebook } from "@/app/clientService";
+import { jupyterUploadFile, jupyterDownloadColabNotebook } from "./api/client";
 
 async function upload_file(code: string, file: File){
     const respones = await jupyterUploadFile({
@@ -11,6 +11,7 @@ async function upload_file(code: string, file: File){
     console.log(respones);
     return respones
 }
+
 
 async function download_notebook(code: string, url: string){
     const respones = await jupyterDownloadColabNotebook({
