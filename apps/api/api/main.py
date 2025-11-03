@@ -38,7 +38,7 @@ def get_application():
 
     _app.add_middleware(
         CORSMiddleware,
-        allow_origins=["https://phas0102-converter-web.vercel.app", "http://localhost:3000"],
+        allow_origins=["*"],
         allow_credentials=True,
         allow_methods=["*"],
         allow_headers=["*"],
