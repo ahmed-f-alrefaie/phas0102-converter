@@ -3,7 +3,7 @@
     "version": "0.0.0",
     "scripts": {
         "dev": "uv run uvicorn api.asgi:app --reload --host 0.0.0.0 --port 8000",
-        "start": "uv run uvicorn api.asgi:app --host 0.0.0.0 --port 8000",
+        "start": "uv run gunicorn --capture-output --enable-stdio-inheritance api.asgi:app --workers 6 --worker-class uvicorn.workers.UvicornWorker --bind 0.0.0.0:8000",
         "generate:requirements": "uv pip compile pyproject.toml -o requirements.txt"
     }
 }
